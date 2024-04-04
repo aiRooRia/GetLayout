@@ -1,6 +1,6 @@
-import React, { ReactElement } from "react";
+import React from "react";
 import { Typography } from "@mui/material";
-import { UserLayout } from "@/components/Layouts/UserLayout";
+import { getUserLayout } from "@/components/Layouts/UserLayout";
 
 const Home = () => {
   return (
@@ -11,8 +11,6 @@ const Home = () => {
     </>
   );
 };
-Home.getLayout = function getLayout(page: ReactElement) {
-  return <UserLayout>{page}</UserLayout>;
-};
+Home.getLayout = getUserLayout;
 
 export default Home;

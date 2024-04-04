@@ -1,13 +1,14 @@
-import { Stack } from "@mui/material";
-import { Footer } from "./Footer";
 import { Header } from "./Header";
-import React from "react";
+import { ReactElement, ReactNode } from "react";
 
-export const AdminLayout = ({ children }: any) => {
+const AdminLayout = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <Header></Header>
       {children}
     </>
   );
+};
+export const getAdminLayout = function getLayout(page: ReactElement) {
+  return <AdminLayout>{page}</AdminLayout>;
 };

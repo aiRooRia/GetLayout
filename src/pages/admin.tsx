@@ -1,6 +1,6 @@
-import React, { ReactElement } from "react";
+import React from "react";
 import { Typography } from "@mui/material";
-import { AdminLayout } from "@/components/Layouts/AdminLayout";
+import { getAdminLayout } from "@/components/Layouts/AdminLayout";
 
 const Admin = () => {
   return (
@@ -11,8 +11,6 @@ const Admin = () => {
     </>
   );
 };
-Admin.getLayout = function getLayout(page: ReactElement) {
-  return <AdminLayout>{page}</AdminLayout>;
-};
+Admin.getLayout = getAdminLayout;
 
 export default Admin;

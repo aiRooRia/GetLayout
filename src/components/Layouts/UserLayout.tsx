@@ -1,9 +1,8 @@
-import { Stack } from "@mui/material";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
-import React from "react";
+import { ReactElement, ReactNode } from "react";
 
-export const UserLayout = ({ children }: any) => {
+const UserLayout = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <Header></Header>
@@ -11,4 +10,7 @@ export const UserLayout = ({ children }: any) => {
       <Footer></Footer>
     </>
   );
+};
+export const getUserLayout = function getLayout(page: ReactElement) {
+  return <UserLayout>{page}</UserLayout>;
 };
